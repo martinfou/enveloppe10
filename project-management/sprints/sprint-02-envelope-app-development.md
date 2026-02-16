@@ -16,6 +16,7 @@ requires: [markdown-support]
 **Sprint Planning Date**: 2026-02-16  
 **Sprint Review Date**: 2026-03-16  
 **Sprint Retrospective Date**: 2026-03-16
+**Overall Status**: ✅ Completed
 
 ## Sprint Overview
 
@@ -140,6 +141,13 @@ requires: [markdown-support]
 - ⭕ **Not Started**: Not yet begun
 - ⏳ **In Progress**: Currently being worked on
 - ✅ **Completed**: Finished and verified
+
+## Retrospective Notes
+
+- **What went well**: Alpine.js and Tailwind CSS provided a very fast development cycle for the UI.
+- **What could be improved**: Browser-specific print default margins can still be tricky; adding more guidance for users next time.
+- **Next steps**: Implement a library of common recipient addresses.
+
 
 ### Priority Levels
 - 🔴 **Critical**: Must be completed this sprint
