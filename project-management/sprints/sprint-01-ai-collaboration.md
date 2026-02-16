@@ -112,10 +112,23 @@ requires: [markdown-support]
 **Estimated Velocity**: 5 points (Target for first sprint)
 
 **Sprint Review Notes**:
-- (To be updated after demo)
+- Successfully demonstrated all AI agent configuration files (.cursorrules, copilot-instructions, etc.).
+- Verified Git initialization and the new mandatory commit standard.
+- Feedback: Documentation is clear, but ensure initialization `git init` is handled at the very start of the process next time.
 
 **Sprint Retrospective Notes**:
-- (To be updated after retrospective)
+- **What went well?**
+  - Seamless collaboration between AI agents using the new instruction files.
+  - Clear, structured commit messages improved repo readability immediately.
+  - Fast turnaround from identification to implementation.
+  
+- **What could be improved?**
+  - Omission of `git init` initially required a manual reminder.
+  - Initial planning should explicitly check for environment readiness (like `.git` exists).
+  
+- **Action items for next sprint**
+  - Strictly follow the new commit format in `docs/git-standards.md`.
+  - Add "Check environment readiness" to the sprint planning checklist.
 
 ---
 
