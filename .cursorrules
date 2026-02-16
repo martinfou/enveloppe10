@@ -1,0 +1,20 @@
+# Cursor Rules - Enveloppe10
+
+Adhere to the following project-specific rules when assisting with the Enveloppe10 repository.
+
+- **Process First**: All development work must be tracked in the `project-management/` directory.
+- **Backlog Reference**: Consult `project-management/backlog/product-backlog.md` to identify current tasks and priorities.
+- **Feature/Bug Details**: Detailed requirements for items are found in `project-management/backlog/features/` and `project-management/backlog/bugs/`.
+- **Sprint Alignment**: Work should align with the active sprint document in `project-management/sprints/`.
+- **Status Consistency**: Ensure status updates are synchronized across the backlog table, individual item files, and sprint documents.
+- **Templates**: Use the templates in `project-management/docs/templates/` for any new project management artifacts.
+
+## Git Commit Standards (STRICT)
+
+All commit messages must follow this format:
+- Subject: `<type>(<scope>): <subject>` (Max 50 chars)
+- Body 1: Business-focused paragraph (Why/Benefit).
+- Body 2: Technical bullet points (Implementation details).
+- Footer: Reference Task ID (e.g., FR-XXX).
+
+Consult `project-management/docs/git-standards.md` for full details.
