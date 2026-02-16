@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Envelope 10 - Web Printing Tool</title>
+    <!-- Tailwind CSS via CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Alpine.js via CDN -->
+    <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
+    <style>
+        [x-cloak] { display: none !important; }
+        
+        @media print {
+            .no-print { display: none !important; }
+            body { 
+                padding: 0; 
+                margin: 0; 
+                background: white;
+            }
+            main {
+                padding: 0 !important;
+                margin: 0 !important;
+            }
+        }
+
+        /* Standard #10 Envelope: 4.125 x 9.5 inches */
+        .envelope-preview {
+            width: 9.5in;
+            height: 4.125in;
+            background-color: white;
+            border: 1px solid #ddd;
+            box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+            position: relative;
+            overflow: hidden;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        @media print {
+            .envelope-preview {
+                border: none;
+                box-shadow: none;
+                margin: 0;
+                width: 9.5in;
+                height: 4.125in;
+                position: absolute;
+                top: 0;
+                left: 0;
+            }
+            @page {
+                size: 9.5in 4.125in landscape;
+                margin: 0;
+            }
+        }
+    </style>
+</head>
+<body class="bg-slate-50 min-h-screen text-slate-800 font-sans flex flex-col" x-data="envelopeApp">
+    
+    <!-- Header (No Print) -->
+    <header class="bg-indigo-600 text-white p-4 shadow-md no-print mb-8">
+        <div class="container mx-auto flex justify-between items-center">
+            <h1 class="text-xl font-bold flex items-center gap-2">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                </svg>
+                Envelope 10
+            </h1>
+            <p class="text-indigo-100 text-sm hidden sm:block">#10 Envelope Printing Made Simple</p>
+        </div>
+    </header>
+
+    <main class="container mx-auto px-4 pb-12 flex-grow">
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 items-start">
+            
+            <!-- Left Column: Inputs (No Print) -->
+            <section class="no-print space-y-6">
+                <!-- Address Forms -->
+                <div class="bg-white p-6 rounded-xl shadow-sm border border-slate-200 space-y-8">
+                    
+                    <!-- Sender Section -->
+                    <div class="space-y-4">
+                        <h2 class="text-lg font-semibold text-indigo-700 flex items-center gap-2 border-b border-slate-100 pb-2">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6" />
+                            </svg>
+                            Sender Address
+                        </h2>
+                        <div class="grid grid-cols-1 gap-3">
+                            <input type="text" x-model="sender.name" placeholder="Name" class="w-full px-3 py-2 border border-slate-200 rounded-md focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500 outline-none transition uppercase text-sm font-medium tracking-wide">
+                            <input type="text" x-model="sender.street" placeholder="Street Address" class="w-full px-3 py-2 border border-slate-200 rounded-md focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500 outline-none transition text-sm">
+                            <div class="grid grid-cols-3 gap-2">
+                                <input type="text" x-model="sender.city" placeholder="City" class="col-span-1 px-3 py-2 border border-slate-200 rounded-md focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500 outline-none transition text-sm">
+                                <input type="text" x-model="sender.state" placeholder="State/Prov" class="col-span-1 px-3 py-2 border border-slate-200 rounded-md focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500 outline-none transition text-sm">
+                                <input type="text" x-model="sender.zip" placeholder="Zip/Postal" class="col-span-1 px-3 py-2 border border-slate-200 rounded-md focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500 outline-none transition text-sm uppercase">
+                            </div>
+                            <div class="flex justify-between items-center pt-2">
+                                <label class="flex items-center gap-2 text-xs text-slate-500 cursor-pointer hover:text-indigo-600 transition">
+                                    <input type="checkbox" x-model="persistSender" class="rounded border-slate-300 text-indigo-600 focus:ring-indigo-500">
+                                    Save as default sender
+                                </label>
+                                <button @click="resetSender()" class="text-xs text-rose-500 hover:text-rose-700 font-medium transition">Clear Sender</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Recipient Section -->
+                    <div class="space-y-4">
+                        <h2 class="text-lg font-semibold text-indigo-700 flex items-center gap-2 border-b border-slate-100 pb-2">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+                            </svg>
+                            Recipient Address
+                        </h2>
+                        <div class="grid grid-cols-1 gap-3">
+                            <input type="text" x-model="recipient.name" placeholder="Name" class="w-full px-3 py-2 border border-slate-200 rounded-md focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500 outline-none transition text-base font-semibold">
+                            <input type="text" x-model="recipient.street" placeholder="Street Address" class="w-full px-3 py-2 border border-slate-200 rounded-md focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500 outline-none transition text-sm">
+                            <div class="grid grid-cols-3 gap-2">
+                                <input type="text" x-model="recipient.city" placeholder="City" class="col-span-1 px-3 py-2 border border-slate-200 rounded-md focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500 outline-none transition text-sm">
+                                <input type="text" x-model="recipient.state" placeholder="State/Prov" class="col-span-1 px-3 py-2 border border-slate-200 rounded-md focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500 outline-none transition text-sm">
+                                <input type="text" x-model="recipient.zip" placeholder="Zip/Postal" class="col-span-1 px-3 py-2 border border-slate-200 rounded-md focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500 outline-none transition text-sm uppercase">
+                            </div>
+                            <input type="text" x-model="recipient.country" placeholder="Country (Optional)" class="w-full px-3 py-2 border border-slate-200 rounded-md focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500 outline-none transition text-xs uppercase tracking-widest text-slate-500">
+                        </div>
+                    </div>
+
+                    <!-- Print Button -->
+                    <div class="pt-4 border-t border-slate-100">
+                        <button @click="printEnvelope()" class="w-full bg-indigo-600 hover:bg-indigo-700 text-white font-bold py-3 px-6 rounded-lg transition duration-150 ease-in-out shadow-lg flex justify-center items-center gap-2">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 17h2a2 2 0 002-2v-4a2 2 0 00-2-2H5a2 2 0 00-2 2v4a2 2 0 002 2h2m2 4h6a2 2 0 002-2v-4a2 2 0 00-2-2H9a2 2 0 00-2 2v4a2 2 0 002 2zm8-12V5a2 2 0 00-2-2H9a2 2 0 00-2 2v4h10z" />
+                            </svg>
+                            Print Envelope
+                        </button>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Right Column: Preview -->
+            <section class="flex flex-col items-center lg:items-end scale-75 sm:scale-90 lg:scale-100 origin-top lg:origin-top-right">
+                <div class="no-print mb-4 text-sm font-semibold text-slate-500 uppercase tracking-widest">Envelope Preview</div>
+                <div class="envelope-preview font-serif" id="print-area">
+                    <!-- Sender Address -->
+                    <div class="absolute top-8 left-8 text-xs leading-tight text-slate-700 uppercase tracking-wider max-w-[3.5in]">
+                        <p class="font-bold" x-text="sender.name || 'SENDER NAME'"></p>
+                        <p x-text="sender.street || '123 Sender St'"></p>
+                        <p><span x-text="sender.city || 'Sender City'"></span>, <span x-text="sender.state || 'ST'"></span> <span x-text="sender.zip || '12345'"></span></p>
+                    </div>
+
+                    <!-- Recipient Address -->
+                    <div class="absolute top-[2in] left-[4in] text-lg leading-relaxed text-slate-900 min-w-[3.5in]">
+                        <p class="text-xl font-bold mb-1" x-text="recipient.name || 'RECIPIENT NAME'"></p>
+                        <p x-text="recipient.street || '456 Destination Ave'"></p>
+                        <p><span x-text="recipient.city || 'Recipient City'"></span>, <span x-text="recipient.state || 'ST'"></span> <span x-text="recipient.zip || '67890'"></span></p>
+                        <p class="uppercase text-sm tracking-widest mt-2" x-text="recipient.country"></p>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <!-- Footer (No Print) -->
+    <footer class="bg-white border-t border-slate-200 py-6 no-print">
+        <div class="container mx-auto px-4 text-center text-slate-500 text-sm">
+            <p>&copy; 2026 Envelope 10 Tool. Built with Alpine.js & Tailwind CSS.</p>
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener('alpine:init', () => {
+            Alpine.data('envelopeApp', () => ({
+                init() {
+                    const saved = localStorage.getItem('envelope_sender');
+                    if (saved) {
+                        this.sender = JSON.parse(saved);
+                        this.persistSender = true;
+                    }
+                    
+                    this.$watch('sender', (val) => {
+                        if (this.persistSender) {
+                            localStorage.setItem('envelope_sender', JSON.stringify(val));
+                        }
+                    }, { deep: true });
+                    
+                    this.$watch('persistSender', (val) => {
+                        if (val) {
+                            localStorage.setItem('envelope_sender', JSON.stringify(this.sender));
+                            this.status = 'Default sender saved';
+                        } else {
+                            localStorage.removeItem('envelope_sender');
+                            this.status = 'Persistence disabled';
+                        }
+                    });
+                },
+                status: 'Ready',
+                persistSender: false,
+                sender: {
+                    name: '',
+                    street: '',
+                    city: '',
+                    state: '',
+                    zip: ''
+                },
+                recipient: {
+                    name: '',
+                    street: '',
+                    city: '',
+                    state: '',
+                    zip: '',
+                    country: ''
+                },
+                resetSender() {
+                    this.sender = { name: '', street: '', city: '', state: '', zip: '' };
+                    this.persistSender = false;
+                    localStorage.removeItem('envelope_sender');
+                    this.status = 'Sender cleared';
+                },
+                printEnvelope() {
+                    window.print();
+                }
+            }))
+        })
+    </script>
+</body>
+</html>

@@ -30,11 +30,11 @@ This is the main product backlog tracking all feature requests and bug fixes.
 |----|-------|----------|--------|--------|--------|---------|---------|
 | [FR-001](features/FR-001-ai-agent-configs.md) | AI Agent Configuration Files | 🔴 Critical | 2 | ✅ | Sprint 1 | 2026-02-14 | 2026-02-16 |
 | [FR-002](features/FR-002-init-git-commit-rules.md) | Git Initialization and Commit Standards | 🟠 High | 3 | ✅ | Sprint 1 | 2026-02-14 | 2026-02-16 |
-| [FR-003](features/FR-003-core-ui-layout.md) | Core UI & Layout | 🔴 Critical | 2 | ⭕ | Sprint 2 | 2026-02-16 | 2026-02-16 |
-| [FR-004](features/FR-004-address-input-form.md) | Address Input Form | 🟠 High | 3 | ⭕ | Sprint 2 | 2026-02-16 | 2026-02-16 |
-| [FR-005](features/FR-005-print-formatting-css.md) | Print Formatting & CSS | 🟠 High | 3 | ⭕ | Sprint 2 | 2026-02-16 | 2026-02-16 |
-| [FR-006](features/FR-006-local-storage-sender.md) | Local Storage for Sender | 🟡 Medium | 1 | ⭕ | Sprint 2 | 2026-02-16 | 2026-02-16 |
-| [FR-007](features/FR-007-github-actions-deployment.md) | GitHub Actions Deployment | 🔴 Critical | 2 | ⭕ | Sprint 2 | 2026-02-16 | 2026-02-16 |
+| [FR-003](features/FR-003-core-ui-layout.md) | Core UI & Layout | 🔴 Critical | 2 | ✅ | Sprint 2 | 2026-02-16 | 2026-02-16 |
+| [FR-004](features/FR-004-address-input-form.md) | Address Input Form | 🟠 High | 3 | ✅ | Sprint 2 | 2026-02-16 | 2026-02-16 |
+| [FR-005](features/FR-005-print-formatting-css.md) | Print Formatting & CSS | 🟠 High | 3 | ✅ | Sprint 2 | 2026-02-16 | 2026-02-16 |
+| [FR-006](features/FR-006-local-storage-sender.md) | Local Storage for Sender | 🟡 Medium | 1 | ✅ | Sprint 2 | 2026-02-16 | 2026-02-16 |
+| [FR-007](features/FR-007-github-actions-deployment.md) | GitHub Actions Deployment | 🔴 Critical | 2 | ✅ | Sprint 2 | 2026-02-16 | 2026-02-16 |
 
 ## Bug Fixes
 

@@ -9,7 +9,7 @@ requires: [markdown-support]
 
 [← Back to Product Backlog](../product-backlog.md)
 
-**Status**: ⭕ Not Started  
+**Status**: ✅ Completed  
 **Priority**: 🟠 High  
 **Story Points**: 3  
 **Created**: 2026-02-16  
@@ -48,3 +48,5 @@ Enables users to actually input the data they want to print, making the app func
 
 - 2026-02-16 - Created
 - 2026-02-16 - Assigned to Sprint 2
+- 2026-02-16 - Status changed to ⏳ In Progress
+- 2026-02-16 - Status changed to ✅ Completed
