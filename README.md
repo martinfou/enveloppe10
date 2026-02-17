@@ -9,6 +9,7 @@ Access the tool here: **[https://martinfou.github.io/enveloppe10/](https://marti
 
 ## ✨ Features
 - **Real-time Preview**: See your envelope update as you type.
+- **Typography Styles**: Choose between Modern, Classic, and Script fonts for a personalized look.
 - **#10 Standard Proportions**: Fixed 9.5" x 4.125" layout for perfect postal alignment.
 - **Privacy First**: All data remains in your browser's `localStorage`. No data is sent to any server.
 - **Sender Persistence**: Save your return address as the default for future use.

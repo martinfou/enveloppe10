@@ -9,12 +9,12 @@ requires: [markdown-support]
 
 [← Back to Product Backlog](../product-backlog.md)
 
-**Status**: ⭕ Not Started  
-**Priority**: 🟡 Medium  
+**Status**: ✅ Completed  
+**Priority**: 🔴 Critical  
 **Story Points**: 2  
 **Created**: 2026-02-16  
 **Updated**: 2026-02-16  
-**Assigned Sprint**: Backlog
+**Assigned Sprint**: Sprint 4  
 
 ## Description
 
@@ -28,11 +28,11 @@ so that I can customize the look of my mail to match the occasion or my brand.
 
 ## Acceptance Criteria
 
-- [ ] A font selection dropdown or toggle is added to the UI.
-- [ ] At least three distinct font options are available (e.g., "Classic Serif", "Modern Sans", "Handwritten").
-- [ ] The real-time preview updates immediately when a font is selected.
-- [ ] The selected font is applied correctly to the printed output via CSS `@media print`.
-- [ ] The selected font choice is persisted in `localStorage` alongside the sender address (optional but recommended).
+- [x] A font selection dropdown or toggle is added to the UI.
+- [x] At least three distinct font options are available (e.g., "Classic Serif", "Modern Sans", "Handwritten").
+- [x] The real-time preview updates immediately when a font is selected.
+- [x] The selected font is applied correctly to the printed output via CSS `@media print`.
+- [x] The selected font choice is persisted in `localStorage` alongside the sender address (optional but recommended).
 
 ## Business Value
 
@@ -47,3 +47,5 @@ Enhances the utility of the tool by providing customization options, making it s
 ## History
 
 - 2026-02-16 - Created
+- 2026-02-16 - Assigned to Sprint 4 and status changed to ⏳ In Progress
+- 2026-02-16 - Status changed to ✅ Completed
