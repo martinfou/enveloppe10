@@ -2,12 +2,12 @@
 
 [← Back to Product Backlog](../product-backlog.md)
 
-**Status**: ⭕ Not Started  
+**Status**: ✅ Completed  
 **Priority**: 🟡 Medium  
 **Story Points**: 2  
 **Created**: 2026-02-16  
 **Updated**: 2026-02-16  
-**Assigned Sprint**: Backlog
+**Assigned Sprint**: Sprint 3  
 
 ## Description
 
