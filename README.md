@@ -1,5 +1,7 @@
 # Envelope 10 - Web Printing Tool
 
+![Envelope 10 App Preview](assets/app-preview.png)
+
 A modern, browser-based utility for printing standard #10 envelopes. No local installation required.
 
 ## 🚀 Live Demo
