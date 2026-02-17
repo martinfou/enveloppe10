@@ -35,6 +35,7 @@ This is the main product backlog tracking all feature requests and bug fixes.
 | [FR-005](features/FR-005-print-formatting-css.md) | Print Formatting & CSS | 🟠 High | 3 | ✅ | Sprint 2 | 2026-02-16 | 2026-02-16 |
 | [FR-006](features/FR-006-local-storage-sender.md) | Local Storage for Sender | 🟡 Medium | 1 | ✅ | Sprint 2 | 2026-02-16 | 2026-02-16 |
 | [FR-007](features/FR-007-github-actions-deployment.md) | GitHub Actions Deployment | 🔴 Critical | 2 | ✅ | Sprint 2 | 2026-02-16 | 2026-02-16 |
+| [FR-008](features/FR-008-custom-color-scheme.md) | Custom Blue Color Scheme | 🟡 Medium | 2 | ⭕ | Backlog | 2026-02-16 | 2026-02-16 |
 
 ## Bug Fixes
 
