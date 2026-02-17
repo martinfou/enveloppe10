@@ -5,8 +5,7 @@
 A modern, browser-based utility for printing standard #10 envelopes. No local installation required.
 
 ## 🚀 Live Demo
-Access the tool here: **[https://<username>.github.io/enveloppe10/](https://<username>.github.io/enveloppe10/)**  
-*(Note: Replace `<username>` with your GitHub username)*
+Access the tool here: **[https://martinfou.github.io/enveloppe10/](https://martinfou.github.io/enveloppe10/)**  
 
 ## ✨ Features
 - **Real-time Preview**: See your envelope update as you type.
