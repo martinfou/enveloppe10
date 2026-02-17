@@ -28,12 +28,12 @@ so that it meets postal requirements and looks clean.
 
 ## Acceptance Criteria
 
-- [ ] `@media print` CSS block implemented.
-- [ ] Page size set to envelope #10 (standard or custom dimension).
-- [ ] Sender address accurately positioned in the top-left corner.
-- [ ] Recipient address accurately centered/positioned for common windowed or non-windowed envelopes.
-- [ ] Hide unnecessary UI elements (forms, headers, footers) when printing.
-- [ ] Support for portrait and landscape orientations (typically landscape for #10).
+- [x] `@media print` CSS block implemented.
+- [x] Page size set to envelope #10 (standard or custom dimension).
+- [x] Sender address accurately positioned in the top-left corner.
+- [x] Recipient address accurately centered/positioned for common windowed or non-windowed envelopes.
+- [x] Hide unnecessary UI elements (forms, headers, footers) when printing.
+- [x] Support for portrait and landscape orientations (typically landscape for #10).
 
 ## Business Value
 

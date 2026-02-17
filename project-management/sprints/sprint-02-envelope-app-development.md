@@ -48,11 +48,11 @@ requires: [markdown-support]
 **User Story**: As a user, I want a modern and responsive web interface, so that I can easily interact with the envelope printing tool on any device.
 
 **Acceptance Criteria**:
-- [ ] Project directory structure initialized.
-- [ ] `index.html` created with character encoding and viewport meta tags.
-- [ ] Tailwind CSS integrated via Play CDN.
-- [ ] Alpine.js integrated via CDN.
-- [ ] Main layout structure implemented.
+- [x] Project directory structure initialized.
+- [x] `index.html` created with character encoding and viewport meta tags.
+- [x] Tailwind CSS integrated via Play CDN.
+- [x] Alpine.js integrated via CDN.
+- [x] Main layout structure implemented.
 
 **Story Points**: 2
 **Priority**: 🔴 Critical
@@ -66,10 +66,10 @@ requires: [markdown-support]
 **User Story**: As a user, I want to easily enter address information with clear fields and instant feedback, so that I can ensure the envelope details are correct before printing.
 
 **Acceptance Criteria**:
-- [ ] Sender address section with all necessary fields.
-- [ ] Recipient address section with all necessary fields.
-- [ ] Active preview area that updates in real-time.
-- [ ] Basic validation (required fields).
+- [x] Sender address section with all necessary fields.
+- [x] Recipient address section with all necessary fields.
+- [x] Active preview area that updates in real-time.
+- [x] Basic validation (required fields).
 
 **Story Points**: 3
 **Priority**: 🟠 High
@@ -83,10 +83,10 @@ requires: [markdown-support]
 **User Story**: As a user, I want the printed envelope to have correct alignment and professional proportions, so that it meets postal requirements and looks clean.
 
 **Acceptance Criteria**:
-- [ ] `@media print` CSS block implemented.
-- [ ] Page size set to envelope #10.
-- [ ] Correct positioning of sender and recipient addresses.
-- [ ] Hide non-printing UI elements.
+- [x] `@media print` CSS block implemented.
+- [x] Page size set to envelope #10.
+- [x] Correct positioning of sender and recipient addresses.
+- [x] Hide non-printing UI elements.
 
 **Story Points**: 3
 **Priority**: 🟠 High
@@ -100,9 +100,9 @@ requires: [markdown-support]
 **User Story**: As a developer/stakeholder, I want the application to be deployed automatically to a public URL, so that I can easily share it with users and see changes in real-time.
 
 **Acceptance Criteria**:
-- [ ] `.github/workflows/deploy.yml` created.
-- [ ] Workflow triggers on push to `main`.
-- [ ] Automated deployment to GitHub Pages.
+- [x] `.github/workflows/deploy.yml` created.
+- [x] Workflow triggers on push to `main`.
+- [x] Automated deployment to GitHub Pages.
 
 **Story Points**: 2
 **Priority**: 🔴 Critical
@@ -116,9 +116,9 @@ requires: [markdown-support]
 **User Story**: As a frequent user, I want my return address to be remembered by the browser, so that I can save time when printing multiple envelopes.
 
 **Acceptance Criteria**:
-- [ ] Save sender data to `localStorage`.
-- [ ] Load sender data on page init.
-- [ ] Reset saved data functionality.
+- [x] Save sender data to `localStorage`.
+- [x] Load sender data on page init.
+- [x] Reset saved data functionality.
 
 **Story Points**: 1
 **Priority**: 🟡 Medium

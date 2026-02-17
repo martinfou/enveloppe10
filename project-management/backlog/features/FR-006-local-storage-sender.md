@@ -28,10 +28,10 @@ so that I can save time when printing multiple envelopes.
 
 ## Acceptance Criteria
 
-- [ ] "Save as default" checkbox/button in the sender address form.
-- [ ] Logic to save sender data to `localStorage` on change or save.
-- [ ] Logic to load sender data from `localStorage` on page initialization.
-- [ ] Clear/Reset button to remove saved data.
+- [x] "Save as default" checkbox/button in the sender address form.
+- [x] Logic to save sender data to `localStorage` on change or save.
+- [x] Logic to load sender data from `localStorage` on page initialization.
+- [x] Clear/Reset button to remove saved data.
 
 ## Business Value
 

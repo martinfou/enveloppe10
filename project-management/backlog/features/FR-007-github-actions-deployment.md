@@ -28,11 +28,11 @@ so that I can easily share it with users and see changes in real-time.
 
 ## Acceptance Criteria
 
-- [ ] `.github/workflows/deploy.yml` file created.
-- [ ] Workflow triggers on push to `main` branch.
-- [ ] Build/Deploy step using `actions/deploy-pages` or similar official action.
-- [ ] Repository settings configured to allow GitHub Pages deployment from Actions.
-- [ ] Verified live URL of the application.
+- [x] `.github/workflows/deploy.yml` file created.
+- [x] Workflow triggers on push to `main` branch.
+- [x] Build/Deploy step using `actions/deploy-pages` or similar official action.
+- [x] Repository settings configured to allow GitHub Pages deployment from Actions.
+- [x] Verified live URL of the application.
 
 ## Business Value
 

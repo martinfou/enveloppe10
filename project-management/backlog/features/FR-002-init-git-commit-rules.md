@@ -31,10 +31,10 @@ so that the project history is readable for both management and engineering team
 - [x] Project is initialized with `git init` if not already a repository.
 - [x] AI configuration files (`.cursorrules`, `.github/copilot-instructions.md`, `.agent/instructions.md`, `.claudecode/instructions.md`) updated with the "Git commit message generation" preset.
 - [x] Commit message format includes:
-  - Subject line: `<type>(<scope>): <subject>` (Max 50 chars).
-  - Body 1: Business-focused paragraph (Why/Benefit).
-  - Body 2: Technical bullet points (Implementation/Performance/Trade-offs).
-  - Footer: Issue/PR references.
+  - [x] Subject line: `<type>(<scope>): <subject>` (Max 50 chars).
+  - [x] Body 1: Business-focused paragraph (Why/Benefit).
+  - [x] Body 2: Technical bullet points (Implementation/Performance/Trade-offs).
+  - [x] Footer: Issue/PR references.
 
 ## Technical Requirements
 

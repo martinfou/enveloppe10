@@ -27,11 +27,11 @@ so that the interface feels modern, cohesive, and visually distinct from generic
 
 ## Acceptance Criteria
 
-- [ ] All primary UI elements (headers, buttons) are updated to use `#0F4C75` or `#3282B8`.
-- [ ] Backgrounds and dividers utilize the dark `#1B262C` or light `#BBE1FA` for contrast.
-- [ ] Text readability is maintained (high contrast between text and background).
-- [ ] Hover states and active UI feedback are implemented using the new palette.
-- [ ] Tailwind configuration or standard CSS is updated to reflect these custom colors.
+- [x] All primary UI elements (headers, buttons) are updated to use `#0F4C75` or `#3282B8`.
+- [x] Backgrounds and dividers utilize the dark `#1B262C` or light `#BBE1FA` for contrast.
+- [x] Text readability is maintained (high contrast between text and background).
+- [x] Hover states and active UI feedback are implemented using the new palette.
+- [x] Tailwind configuration or standard CSS is updated to reflect these custom colors.
 
 ## Business Value
 

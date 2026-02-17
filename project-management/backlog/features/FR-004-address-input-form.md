@@ -28,11 +28,11 @@ so that I can ensure the envelope details are correct before printing.
 
 ## Acceptance Criteria
 
-- [ ] Sender address section with all necessary fields.
-- [ ] Recipient address section with all necessary fields.
-- [ ] Active preview area that updates in real-time as the user types.
-- [ ] Basic validation (required fields) with visual cues.
-- [ ] Styling for forms using Tailwind CSS utility classes.
+- [x] Sender address section with all necessary fields.
+- [x] Recipient address section with all necessary fields.
+- [x] Active preview area that updates in real-time as the user types.
+- [x] Basic validation (required fields) with visual cues.
+- [x] Styling for forms using Tailwind CSS utility classes.
 
 ## Business Value
 

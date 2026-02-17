@@ -28,12 +28,12 @@ so that I can easily interact with the envelope printing tool on any device.
 
 ## Acceptance Criteria
 
-- [ ] Project directory structure initialized.
-- [ ] `index.html` created with character encoding and viewport meta tags.
-- [ ] Tailwind CSS (v3 or latest) integrated via Play CDN.
-- [ ] Alpine.js integrated via CDN.
-- [ ] Main layout structure (header, main content area, footer) implemented.
-- [ ] Basic "Hello World" Alpine.js component working.
+- [x] Project directory structure initialized.
+- [x] `index.html` created with character encoding and viewport meta tags.
+- [x] Tailwind CSS (v3 or latest) integrated via Play CDN.
+- [x] Alpine.js integrated via CDN.
+- [x] Main layout structure (header, main content area, footer) implemented.
+- [x] Basic "Hello World" Alpine.js component working.
 
 ## Business Value
 
